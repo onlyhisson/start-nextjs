@@ -1,0 +1,26 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  width: 100%;
+  height: 72px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+
+  a {
+    color: inherit;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  a.active {
+    color: #8f44fd;
+  }
+  span {
+    margin-right: 10px;
+  }
+}

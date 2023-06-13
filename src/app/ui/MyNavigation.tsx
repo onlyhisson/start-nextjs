@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "react-scroll";
+import "./MyNavigation.scss";
 
 type TNavLink = {
   id: number;

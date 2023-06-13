@@ -1,0 +1,26 @@
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 15%;
+  text-align: center;
+
+  &:nth-child(1) {
+    background: #ffffff;
+  }
+
+  &:nth-child(2) {
+    background: #fbf8ff;
+  }
+
+  &:nth-child(3) {
+    background: #2a282d;
+    h2 {
+      color: rgb(255 255 255 / 96%);
+    }
+    p {
+      color: rgb(255 255 255 / 70%);
+    }
+  }
+}
