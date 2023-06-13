@@ -14,7 +14,14 @@ export function MyNavigation({ navLinks }: { navLinks: TNavLink[] }) {
       <span className="material-symbols-outlined"> menu </span>
       {navLinks.map((link) => {
         return (
-          <Link activeClass="active" smooth duration={0.3} spy to={link.href}>
+          <Link
+            key={link.id}
+            activeClass="active"
+            smooth
+            duration={0.3}
+            spy
+            to={link.href}
+          >
             {link.name}
           </Link>
         );

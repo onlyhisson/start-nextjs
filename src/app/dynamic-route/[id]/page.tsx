@@ -1,6 +1,6 @@
 import styles from "@/styles/Home.module.scss";
 import { ParsedUrlQuery } from "querystring";
-
+import { wait } from "@/utils/common";
 interface IParams extends ParsedUrlQuery {
   id: string;
 }
@@ -35,6 +35,7 @@ export default async function SSR({ params: { id } }: { params: IParams }) {
   // 개발 모드에서는 server에도 출력됨
   // console.log(posts);
 
+  await wait(3000);
   const post = await getPost(id);
 
   return (
