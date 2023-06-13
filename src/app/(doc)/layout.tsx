@@ -3,7 +3,7 @@
  * https://nextjs.org/docs/app/building-your-application/routing#file-conventions
  */
 
-import "./globals.css";
+import "@/app/globals.css";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
