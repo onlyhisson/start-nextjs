@@ -1,5 +1,5 @@
 import { MyNavigation } from "@/app/ui/MyNavigation";
-import { MySection } from "../ui/MySection";
+import { MySection } from "@/app/ui/MySection";
 
 const navLinks = [
   { id: 1, href: "about", name: "About" },
