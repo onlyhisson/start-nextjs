@@ -10,6 +10,6 @@ async function getData() {
 }
 
 export default async function Error1() {
-  const data = await getData(); // 강제 에러 발생
+  // const data = await getData(); // 강제 에러 발생
   return <div>Error test Page</div>;
 }

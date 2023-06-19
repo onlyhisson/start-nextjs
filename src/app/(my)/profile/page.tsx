@@ -10,112 +10,112 @@ export default function Profile() {
           <div>3</div>
         </div>
         <div className="bg-orange pt-24 lg:w-1/2 lg:py-24">
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi
             similique eveniet, amet maxime sapiente, repellendus tenetur porro
             quae? Itaque, provident mollitia.
           </p>
-          <h3>What's it all about?</h3>
+          <h3>What&apos;s it all about?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             praesentium qui error nulla, est deleniti repellat soluta animi

@@ -3,11 +3,7 @@
  * https://nextjs.org/docs/app/building-your-application/routing#file-conventions
  */
 
-import { Html, Head, Main, NextScript } from "next/document";
 import "@/app/globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Basic Next.js",
@@ -20,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <Html>
-      <Head>
+    <html>
+      <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -36,8 +32,8 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0"
         />
-      </Head>
-      <body className={inter.className}>{children}</body>
-    </Html>
+      </head>
+      <body>{children}</body>
+    </html>
   );
 }
