@@ -33,7 +33,9 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0"
         />
       </head>
-      <body className="bg-slate-900">{children}</body>
+      <body className="bg-slate-900 leading-relaxed antialiased text-slate-400 selection:bg-teal-300 selection:text-teal-900">
+        {children}
+      </body>
     </html>
   );
 }
