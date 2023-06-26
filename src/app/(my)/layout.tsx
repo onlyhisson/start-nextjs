@@ -5,6 +5,7 @@
 
 import "@/app/globals.css";
 import { Roboto, Courier_Prime } from "next/font/google";
+import { Cursor } from "../ui/Cursor";
 
 const roboto = Roboto({
   weight: "500",
@@ -31,7 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.className}>
       <body className="bg-slate-900 leading-relaxed antialiased text-slate-400 selection:bg-teal-300 selection:text-teal-900">
-        {children}
+        <div className="relative">
+          <Cursor />
+          {children}
+        </div>
       </body>
     </html>
   );
