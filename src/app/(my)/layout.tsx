@@ -4,6 +4,19 @@
  */
 
 import "@/app/globals.css";
+import { Roboto, Courier_Prime } from "next/font/google";
+
+const roboto = Roboto({
+  weight: "500",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const courier = Courier_Prime({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "My Page",
@@ -16,23 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0"
-        />
-      </head>
+    <html lang="en" className={roboto.className}>
       <body className="bg-slate-900 leading-relaxed antialiased text-slate-400 selection:bg-teal-300 selection:text-teal-900">
         {children}
       </body>

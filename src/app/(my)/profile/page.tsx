@@ -1,11 +1,14 @@
 import Link from "next/link";
-import ProfileNavigation from "@/app/ui/ProfileNavigation";
 import Image from "next/image";
+import ProfileNavigation from "@/app/ui/profile/ProfileNavigation";
+import SNSLinks from "@/app/ui/SNSLinks";
+import { TechCard } from "@/app/ui/profile/Profile";
+import skillInfos from "@/app/static/experience";
 
 const navLinks = [
-  { id: 1, href: "about", name: "About" },
-  { id: 2, href: "experience", name: "Experience" },
-  { id: 3, href: "projects", name: "Projects" },
+  { id: 1, href: "#about", name: "About" },
+  { id: 2, href: "#experience", name: "Experience" },
+  { id: 3, href: "#projects", name: "Projects" },
 ];
 
 const mySections = [
@@ -22,7 +25,7 @@ export default function Profile() {
           <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
             <div>
               <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-                <Link href="/">장형수</Link>
+                <Link href="/">Jang Hyeong-su</Link>
               </h1>
               <h2 className="mt-3 text-lg font-medium text-slate-200 sm:text-xl">
                 Full Stack Developer
@@ -33,143 +36,194 @@ export default function Profile() {
               </p>
               <ProfileNavigation navLinks={navLinks} />
             </div>
-            <ul className="ml-1 mt-18 flex items-center">
-              <li className="mr-5 text-xs">
-                <Link
-                  className="block hover:text-slate-200"
-                  href="https://github.com/onlyhisson"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="sr-only">GitHub</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    className="h-6 w-6"
-                    aria-hidden="true"
-                  >
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                  </svg>
-                </Link>
-              </li>
-            </ul>
+            <SNSLinks />
           </div>
 
-          <div className="pt-24 lg:w-1/2 lg:py-24">
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-            <h3>What&apos;s it all about?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur praesentium qui error nulla, est deleniti repellat
-              soluta animi similique eveniet, amet maxime sapiente, repellendus
-              tenetur porro quae? Itaque, provident mollitia.
-            </p>
-          </div>
+          <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
+            <section
+              id="about"
+              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+              aria-label="About me"
+            >
+              <div
+                className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5
+              backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative
+              lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+              >
+                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+                  About
+                </h2>
+              </div>
+              <div>
+                <p className="mb-4">
+                  Back in 2012, I decided to try my hand at creating custom
+                  Tumblr themes and tumbled head first into the rabbit hole of
+                  coding and web development. Fast-forward to today, and I’ve
+                  had the privilege of building software for an{" "}
+                  <a
+                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
+                    href="https://us.mullenlowe.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    advertising agency
+                  </a>
+                  , a{" "}
+                  <a
+                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
+                    href="https://starry.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    start-up
+                  </a>
+                  , a{" "}
+                  <a
+                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
+                    href="https://scout.camd.northeastern.edu/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    student-led design studio
+                  </a>
+                  , and a{" "}
+                  <a
+                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
+                    href="https://www.apple.com/apple-music/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    huge corporation
+                  </a>
+                  .
+                </p>
+                <p className="mb-4">
+                  My main focus these days is building products and leading
+                  projects for our clients at{" "}
+                  <a
+                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
+                    href="https://upstatement.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Upstatement
+                  </a>
+                  . In my free time I've also released an{" "}
+                  <a
+                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
+                    href="https://www.newline.co/courses/build-a-spotify-connected-app"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    online video course
+                  </a>{" "}
+                  that covers everything you need to know to build a web app
+                  with the Spotify API.
+                </p>
+                <p>
+                  When I’m not at the computer, I’m usually rock climbing,
+                  hanging out with my wife and two cats, or running around
+                  Hyrule searching for{" "}
+                  <span className="group/korok inline-flex lg:cursor-[url('/next.svg'),_pointer] lg:font-medium lg:text-slate-200">
+                    <span className="sr-only">Korok seeds</span>
+                    <span
+                      className="group-hover/korok:text-red-400 transition duration-75 group-hover/korok:-translate-y-px delay-[50ms]"
+                      aria-hidden="true"
+                    >
+                      K
+                    </span>
+                    <span
+                      className="group-hover/korok:text-orange-400 transition duration-75 group-hover/korok:-translate-y-px delay-[75ms]"
+                      aria-hidden="true"
+                    >
+                      o
+                    </span>
+                    <span
+                      className="group-hover/korok:text-yellow-400 transition duration-75 group-hover/korok:-translate-y-px delay-[100ms]"
+                      aria-hidden="true"
+                    >
+                      r
+                    </span>
+                    <span
+                      className="group-hover/korok:text-lime-400 transition duration-75 group-hover/korok:-translate-y-px delay-[125ms]"
+                      aria-hidden="true"
+                    >
+                      o
+                    </span>
+                    <span
+                      className="group-hover/korok:text-green-400 transition duration-75 group-hover/korok:-translate-y-px delay-[150ms]"
+                      aria-hidden="true"
+                    >
+                      k
+                    </span>
+                    <span
+                      className="group-hover/korok:text-teal-400 transition duration-75 group-hover/korok:-translate-y-px delay-[175ms]"
+                      aria-hidden="true"
+                    >
+                      &nbsp;
+                    </span>
+                    <span
+                      className="group-hover/korok:text-cyan-400 transition duration-75 group-hover/korok:-translate-y-px delay-[200ms]"
+                      aria-hidden="true"
+                    >
+                      s
+                    </span>
+                    <span
+                      className="group-hover/korok:text-sky-400 transition duration-75 group-hover/korok:-translate-y-px delay-[225ms]"
+                      aria-hidden="true"
+                    >
+                      e
+                    </span>
+                    <span
+                      className="group-hover/korok:text-blue-400 transition duration-75 group-hover/korok:-translate-y-px delay-[250ms]"
+                      aria-hidden="true"
+                    >
+                      e
+                    </span>
+                    <span
+                      className="group-hover/korok:text-indigo-400 transition duration-75 group-hover/korok:-translate-y-px delay-[275ms]"
+                      aria-hidden="true"
+                    >
+                      d
+                    </span>
+                    <span
+                      className="group-hover/korok:text-violet-400 transition duration-75 group-hover/korok:-translate-y-px delay-[300ms]"
+                      aria-hidden="true"
+                    >
+                      s
+                    </span>
+                  </span>
+                  .
+                </p>
+              </div>
+            </section>
+
+            <section
+              id="experience"
+              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+              aria-label="Work experience"
+            >
+              <div
+                className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5
+                backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+              >
+                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+                  Experience
+                </h2>
+              </div>
+              <div>
+                <ol className="group/list">
+                  {skillInfos.map((experience) => {
+                    return (
+                      <li className="mb-12">
+                        <TechCard experience={experience} />
+                      </li>
+                    );
+                  })}
+                </ol>
+              </div>
+            </section>
+          </main>
         </div>
       </div>
     </>

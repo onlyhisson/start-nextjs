@@ -17,16 +17,21 @@ export default function ProfileNavigation({
   return (
     <nav className="nav hidden lg:block">
       <ul className="mt-16 w-max">
-        {navLinks.map((link) => {
+        {navLinks.map((link, idx) => {
+          const customClass =
+            idx === 0
+              ? "group flex items-center py-3 active"
+              : "group flex items-center py-3";
           return (
             <li key={link.id}>
               <Link
-                className="group flex items-center py-3"
+                className={customClass}
                 activeClass="active"
                 smooth
                 duration={0.3}
                 spy
                 to={link.href}
+                href={link.href}
               >
                 <span
                   className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all
