@@ -2,19 +2,21 @@ import Link from "next/link";
 import Image from "next/image";
 import ProfileNavigation from "@/app/ui/profile/ProfileNavigation";
 import SNSLinks from "@/app/ui/SNSLinks";
-import { TechCard } from "@/app/ui/profile/Profile";
+import {
+  Section,
+  ExperienceCard,
+  StickySectionTitle,
+  ProjectCard,
+} from "@/app/ui/profile/Profile";
+import { StrongLink, StrongLink2 } from "@/app/ui/profile/CustomLink";
+
 import skillInfos from "@/app/static/experience";
+import projects from "@/app/static/projects";
 
 const navLinks = [
   { id: 1, href: "#about", name: "About" },
   { id: 2, href: "#experience", name: "Experience" },
   { id: 3, href: "#projects", name: "Projects" },
-];
-
-const mySections = [
-  { no: 1, id: "about", title: "About" },
-  { no: 2, id: "experience", title: "Experience" },
-  { no: 3, id: "projects", title: "Projects" },
 ];
 
 export default function Profile() {
@@ -40,83 +42,39 @@ export default function Profile() {
           </div>
 
           <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
-            <section
-              id="about"
-              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-              aria-label="About me"
-            >
-              <div
-                className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5
-              backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative
-              lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
-              >
-                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-                  About
-                </h2>
-              </div>
+            <Section id="about" label="About me">
+              <StickySectionTitle>About</StickySectionTitle>
               <div>
                 <p className="mb-4">
                   Back in 2012, I decided to try my hand at creating custom
                   Tumblr themes and tumbled head first into the rabbit hole of
                   coding and web development. Fast-forward to today, and I’ve
                   had the privilege of building software for an{" "}
-                  <a
-                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://us.mullenlowe.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <StrongLink href="https://us.mullenlowe.com/">
                     advertising agency
-                  </a>
+                  </StrongLink>
                   , a{" "}
-                  <a
-                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://starry.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    start-up
-                  </a>
-                  , a{" "}
-                  <a
-                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://scout.camd.northeastern.edu/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <StrongLink href="https://starry.com/">start-up</StrongLink>,
+                  a{" "}
+                  <StrongLink href="https://scout.camd.northeastern.edu/">
                     student-led design studio
-                  </a>
+                  </StrongLink>
                   , and a{" "}
-                  <a
-                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://www.apple.com/apple-music/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <StrongLink href="https://www.apple.com/apple-music/">
                     huge corporation
-                  </a>
+                  </StrongLink>
                   .
                 </p>
                 <p className="mb-4">
                   My main focus these days is building products and leading
                   projects for our clients at{" "}
-                  <a
-                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://upstatement.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <StrongLink href="https://upstatement.com/">
                     Upstatement
-                  </a>
+                  </StrongLink>
                   . In my free time I've also released an{" "}
-                  <a
-                    className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://www.newline.co/courses/build-a-spotify-connected-app"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <StrongLink href="https://www.newline.co/courses/build-a-spotify-connected-app">
                     online video course
-                  </a>{" "}
+                  </StrongLink>{" "}
                   that covers everything you need to know to build a web app
                   with the Spotify API.
                 </p>
@@ -196,33 +154,54 @@ export default function Profile() {
                   .
                 </p>
               </div>
-            </section>
+            </Section>
 
-            <section
-              id="experience"
-              className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-              aria-label="Work experience"
-            >
-              <div
-                className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5
-                backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
-              >
-                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-                  Experience
-                </h2>
-              </div>
+            <Section id="experience" label="Work experience">
+              <StickySectionTitle>Experience</StickySectionTitle>
               <div>
                 <ol className="group/list">
                   {skillInfos.map((experience) => {
                     return (
                       <li className="mb-12">
-                        <TechCard experience={experience} />
+                        <ExperienceCard experience={experience} />
                       </li>
                     );
                   })}
                 </ol>
               </div>
-            </section>
+            </Section>
+
+            <Section id="project" label="Selected projects">
+              <StickySectionTitle>Project</StickySectionTitle>
+              <div>
+                <ol className="group/list">
+                  {projects.map((project) => {
+                    return (
+                      <li className="mb-12">
+                        <ProjectCard project={project} />
+                      </li>
+                    );
+                  })}
+                </ol>
+              </div>
+            </Section>
+            <footer className="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
+              <p>
+                Loosely designed in{" "}
+                <StrongLink2 href="https://www.figma.com/">Figma</StrongLink2>{" "}
+                and coded in{" "}
+                <StrongLink2 href="https://code.visualstudio.com/">
+                  Visual Studio Code
+                </StrongLink2>{" "}
+                by yours truly. Built with{" "}
+                <StrongLink2 href="https://nextjs.org/">Next.js</StrongLink2>{" "}
+                and{" "}
+                <StrongLink2 href="https://tailwindcss.com/">
+                  Tailwind CSS
+                </StrongLink2>
+                .
+              </p>
+            </footer>
           </main>
         </div>
       </div>
