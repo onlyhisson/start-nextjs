@@ -5,6 +5,7 @@ import "./ProfileNavigation.scss";
 
 type TNavLink = {
   id: number;
+  ref: string;
   href: string;
   name: string;
 };
@@ -18,19 +19,15 @@ export default function ProfileNavigation({
     <nav className="nav hidden lg:block">
       <ul className="mt-16 w-max">
         {navLinks.map((link, idx) => {
-          const customClass =
-            idx === 0
-              ? "group flex items-center py-3 active"
-              : "group flex items-center py-3";
           return (
             <li key={link.id}>
               <Link
-                className={customClass}
+                className="group flex items-center py-3"
                 activeClass="active"
                 smooth
                 duration={0.3}
                 spy
-                to={link.href}
+                to={link.ref}
                 href={link.href}
               >
                 <span
