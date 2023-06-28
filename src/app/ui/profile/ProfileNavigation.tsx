@@ -10,56 +10,87 @@ type TNavLink = {
   name: string;
 };
 
-const clamp = (value: number) => Math.max(0, value);
+/**
+ * https://codesandbox.io/s/usescrollspy-2d9jg
+ */
 
+// 최소한 0 리턴
+const minZero = (value: number) => Math.max(0, value);
+
+// find 함수를 사용할 것이기 때문에 양쪽 범위 모두 '=' 포함해도 상관없음
 const isBetween = (value: number, floor: number, ceil: number) =>
   value >= floor && value <= ceil;
 
-const offset = 110;
+const useScrollSpy = (navLinks: TNavLink[], offset: number = 0) => {
+  const sections = navLinks.map((el) => el.ref);
+  const [activeSection, setActiveSection] = useState(sections[0]);
+
+  useEffect(() => {
+    const scrollHandler = () => {
+      // 문서가 수직으로 얼마나 스크롤 됐는지 픽셀 단위로 반환
+      const scrollY = window.pageYOffset;
+
+      // viewport 와 각 section 간의 상대적 위치 정보
+      const domRectInfos = sections.map((sectionId) => {
+        const element = document.getElementById(sectionId);
+
+        // 테스트시 확인 안됨
+        if (!element) {
+          return { sectionId, top: -1, bottom: -1 };
+        }
+
+        // https://developer.mozilla.org/ko/docs/Web/API/Element/getBoundingClientRect
+        // 엘리먼트의 크기와 뷰포트와의 상대적인 위치 정보를 제공하는 DOMRect 객체 반환
+        /* 
+            { 
+              x: 뷰포트 왼쪽에서 해당 엘리먼트 왼쪽 기준 위치, 
+              y: 뷰포트 상단에서 해당 엘리먼드 상단 간격, 
+              left: 뷰포트 왼쪽에서 해당 엘리먼트 왼쪽 기준 위치, 
+              top: 뷰포트에서 해당 엘리먼드 상단 간격, 
+              bottom: y or top + height, 
+              right: x or left + width, 
+              width: 해당 엘리먼트 너비, 
+              height: 해당 엘리먼트 높이, 
+            }
+          */
+        const domRect = element.getBoundingClientRect();
+        const top = minZero(domRect.top + scrollY - offset);
+        const bottom = minZero(domRect.bottom + scrollY - offset);
+
+        return { sectionId, top, bottom };
+      });
+
+      // 배열에서 먼저 해당 되는 section 엘리먼트 리턴
+      const position = domRectInfos.find(({ top, bottom }) =>
+        isBetween(scrollY, top, bottom)
+      );
+
+      const activeName = position?.sectionId || "";
+      if (activeName !== "") {
+        setActiveSection(activeName);
+      }
+    };
+
+    // scrollHandler();
+
+    window.addEventListener("resize", scrollHandler);
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("resize", scrollHandler);
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, [navLinks, offset]);
+
+  return activeSection;
+};
 
 export default function ProfileNavigation({
   navLinks,
 }: {
   navLinks: TNavLink[];
 }) {
-  const sections = navLinks.map((el) => el.ref);
-
-  const [activeSection, setActiveSection] = useState(sections[0]);
-
-  useEffect(() => {
-    const listener = () => {
-      const scroll = window.pageYOffset;
-
-      const position = sections
-        .map((id) => {
-          const element = document.getElementById(id);
-
-          if (!element) return { id, top: -1, bottom: -1 };
-
-          const rect = element.getBoundingClientRect();
-          const top = clamp(rect.top + scroll - offset);
-          const bottom = clamp(rect.bottom + scroll - offset);
-
-          return { id, top, bottom };
-        })
-        .find(({ top, bottom }) => isBetween(scroll, top, bottom));
-
-      const activeName = position?.id || "";
-      if (activeName !== "") {
-        setActiveSection(activeName);
-      }
-    };
-
-    listener();
-
-    window.addEventListener("resize", listener);
-    window.addEventListener("scroll", listener);
-
-    return () => {
-      window.removeEventListener("resize", listener);
-      window.removeEventListener("scroll", listener);
-    };
-  }, []);
+  const activeSection = useScrollSpy(navLinks, 110);
 
   return (
     <nav className="nav hidden lg:block">
