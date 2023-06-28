@@ -160,9 +160,9 @@ export default function Profile() {
               <StickySectionTitle>Experience</StickySectionTitle>
               <div>
                 <ol className="group/list">
-                  {skillInfos.map((experience) => {
+                  {skillInfos.map((experience, idx) => {
                     return (
-                      <li className="mb-12">
+                      <li key={`skill-${idx}`} className="mb-12">
                         <ExperienceCard experience={experience} />
                       </li>
                     );
@@ -175,9 +175,9 @@ export default function Profile() {
               <StickySectionTitle>Project</StickySectionTitle>
               <div>
                 <ol className="group/list">
-                  {projects.map((project) => {
+                  {projects.map((project, idx) => {
                     return (
-                      <li className="mb-12">
+                      <li key={`project-${idx}`} className="mb-12">
                         <ProjectCard project={project} />
                       </li>
                     );

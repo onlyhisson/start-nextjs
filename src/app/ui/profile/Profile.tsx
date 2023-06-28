@@ -264,9 +264,9 @@ export function Period({ period }: { period: string }) {
 export function Skills({ items }: { items: string[] }) {
   return (
     <ul className="mt-2 flex flex-wrap" aria-label="skills used">
-      {items.map((item) => {
+      {items.map((item, idx) => {
         return (
-          <li className="mr-1.5 mt-2">
+          <li key={`skill-detail-${idx}`} className="mr-1.5 mt-2">
             <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
               {item}
             </div>
