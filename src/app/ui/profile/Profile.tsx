@@ -82,7 +82,9 @@ export function ExperienceCard({ experience }: { experience: TExperience }) {
         <Title title={experience.title} label={experience.titleLabel}>
           <SubTitle subTitle={experience.subTitle} />
         </Title>
-        <p className="mt-2 text-sm leading-normal">{experience.description}</p>
+        <p className="mt-2 text-sm font-light leading-normal">
+          {experience.description}
+        </p>
         <SkillLinks items={experience.skillLinks} />
         <Skills items={experience.skills} />
       </div>

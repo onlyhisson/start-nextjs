@@ -22,19 +22,20 @@ const navLinks = [
 export default function Profile() {
   return (
     <>
-      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
         <div className="lg:flex lg:justify-between lg:gap-4">
           <div className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
             <div>
-              <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-                <Link href="/">Jang Hyeong-su</Link>
+              <h1 className="text-4xl font-500 tracking-tight text-slate-200 sm:text-5xl">
+                <Link href="/">장형수</Link>
               </h1>
-              <h2 className="mt-3 text-lg font-medium text-slate-200 sm:text-xl">
+              <h2 className="mt-3 text-lg font-normal text-slate-200 sm:text-xl">
                 Full Stack Developer
               </h2>
-              <p className="mt-4 max-w-xs leading-normal">
-                I build accessible, inclusive products and digital experiences
-                for the web.
+              <p className="mt-4 font-light max-w-xs leading-normal">
+                프로젝트에 대한 능동적이고 적극적인 이해, 주어진 환경과 자원에
+                따라 필요한 기술을 학습하며 적용하는 일에 열린 태도, 팀원들과
+                효과적인 소통을 추구합니다.
               </p>
               <ProfileNavigation navLinks={navLinks} />
             </div>
@@ -44,7 +45,7 @@ export default function Profile() {
           <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
             <Section id="about" label="About me">
               <StickySectionTitle>About</StickySectionTitle>
-              <div>
+              <div className="font-light">
                 <p className="mb-4">
                   Back in 2012, I decided to try my hand at creating custom
                   Tumblr themes and tumbled head first into the rabbit hole of
