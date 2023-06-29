@@ -9,13 +9,20 @@ type TLinkInfo = {
 };
 
 type TExperience = {
-  period: string;
+  period: { from: string; to: string };
+  href: string | null;
   title: string;
   titleLabel: string;
   subTitle: string[];
   skillLinks: TLinkInfo[];
   skills: string[];
-  description: string;
+  description: string[];
+};
+
+type TTitleInfo = {
+  title: string;
+  label: string;
+  href: string | null;
 };
 
 type TProject = {
@@ -79,12 +86,21 @@ export function ExperienceCard({ experience }: { experience: TExperience }) {
       <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
       <Period period={experience.period} />
       <div className="z-10 sm:col-span-6">
-        <Title title={experience.title} label={experience.titleLabel}>
+        <Title
+          titleInfo={{
+            title: experience.title,
+            label: experience.titleLabel,
+            href: experience.href,
+          }}
+        >
           <SubTitle subTitle={experience.subTitle} />
         </Title>
-        <p className="mt-2 text-sm font-light leading-normal">
-          {experience.description}
-        </p>
+        {experience.description.map((desc) => {
+          return (
+            <p className="mt-2 text-sm font-light leading-normal">{desc}</p>
+          );
+        })}
+
         <SkillLinks items={experience.skillLinks} />
         <Skills items={experience.skills} />
       </div>
@@ -97,7 +113,13 @@ export function ProjectCard({ project }: { project: TProject }) {
     <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
       <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
       <div className="z-10 sm:order-2 sm:col-span-6">
-        <Title title={project.title} label={project.titleLabel}>
+        <Title
+          titleInfo={{
+            title: project.title,
+            label: project.titleLabel,
+            href: "/",
+          }}
+        >
           {null}
         </Title>
         <p className="mt-2 text-sm leading-normal">{project.description}</p>
@@ -190,26 +212,18 @@ function StarInfo({
 
 function Title({
   children,
-  title,
-  label,
+  titleInfo,
 }: {
   children: React.ReactNode;
-  title: string;
-  label: string;
+  titleInfo: TTitleInfo;
 }) {
-  return (
-    <h3 className="font-medium leading-snug text-slate-200">
-      <div>
-        <a
-          className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
-          href="https://upstatement.com"
-          target="_blank"
-          rel="noreferrer"
-          aria-label={label}
-        >
-          <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-          <span className="inline-block">
-            {title}
+  const content = () => {
+    return (
+      <>
+        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+        <span className="inline-block">
+          {titleInfo.title}
+          {titleInfo.href && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -223,8 +237,31 @@ function Title({
                 clipRule="evenodd"
               ></path>
             </svg>
-          </span>
-        </a>
+          )}
+        </span>
+      </>
+    );
+  };
+
+  const cardStyle =
+    "inline-flex items-baseline font-medium leading-tight text-slate-200 " +
+    "hover:text-teal-300 focus-visible:text-teal-300 group/link text-base";
+  return (
+    <h3 className="font-medium leading-snug text-slate-200 mb-3">
+      <div>
+        {titleInfo.href ? (
+          <Link
+            className={cardStyle}
+            href={titleInfo.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={titleInfo.label}
+          >
+            {content()}
+          </Link>
+        ) : (
+          <div className={cardStyle}>{content()}</div>
+        )}
       </div>
       {children}
     </h3>
@@ -252,13 +289,15 @@ function SubTitle({ subTitle }: { subTitle: string[] }) {
   );
 }
 
-export function Period({ period }: { period: string }) {
+export function Period({ period }: { period: { from: string; to: string } }) {
   return (
     <header
       className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
       aria-label="2018 to Present"
     >
-      {period}
+      {period.from}
+      <span className="pl-1 pr-1">-</span>
+      {period.to}
     </header>
   );
 }
