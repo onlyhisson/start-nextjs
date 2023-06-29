@@ -123,6 +123,7 @@ export function ProjectCard({ project }: { project: TProject }) {
           {null}
         </Title>
         <p className="mt-2 text-sm leading-normal">{project.description}</p>
+
         {project.installInfo && (
           <InstallInfo href={project.installInfo.href}>
             {project.installInfo.content}
@@ -133,6 +134,12 @@ export function ProjectCard({ project }: { project: TProject }) {
             {project.starInfo.content}
           </StarInfo>
         )}
+        <SkillLinks
+          items={[
+            { id: 1, title: "test1", href: "onlyhisson.com" },
+            { id: 2, title: "test2", href: "onlyhisson.com" },
+          ]}
+        />
         <Skills items={project.skills} />
       </div>
       <Image
