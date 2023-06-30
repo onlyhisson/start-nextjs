@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     title: "Lead Engineer · Upstatement",
     titleLabel: "Lead Engineer at Upstatement",
-    imgSrc: "/pairing.png",
+    imgSrc: "/wallet_flow.png",
     imgAlt: "paring_2.0",
     skills: [
       "React",

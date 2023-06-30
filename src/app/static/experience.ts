@@ -1,6 +1,5 @@
-const skillInfos = [
+const experienceInfos = [
   {
-    id: 1,
     period: { from: "2020. 09", to: "2023. 04" },
     href: "http://hackers.iwinv.net/",
     title: "해커스홀딩스",
@@ -26,7 +25,6 @@ const skillInfos = [
     ],
   },
   {
-    id: 2,
     period: { from: "2018. 06", to: "2019. 05" },
     href: null,
     title: "한국영상솔루션",
@@ -37,7 +35,6 @@ const skillInfos = [
     description: ["농장 자율 재배(스마트팜)를 목표로 서비스를 개발"],
   },
   {
-    id: 3,
     period: { from: "2014. 04", to: "2015. 12" },
     href: "http://www.ubiot.co.kr/",
     title: "유비아이오티",
@@ -52,4 +49,4 @@ const skillInfos = [
   },
 ];
 
-export default skillInfos;
+export default experienceInfos;

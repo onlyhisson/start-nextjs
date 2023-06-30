@@ -1,4 +1,3 @@
-import { profileEnd } from "console";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +7,7 @@ type TLinkInfo = {
   href: string;
 };
 
-type TExperience = {
+export type TExperience = {
   period: { from: string; to: string };
   href: string | null;
   title: string;
@@ -25,7 +24,7 @@ type TTitleInfo = {
   href: string | null;
 };
 
-type TProject = {
+export type TProject = {
   imgSrc: string;
   imgAlt: string;
   title: string;
@@ -122,24 +121,28 @@ export function ProjectCard({ project }: { project: TProject }) {
         >
           {null}
         </Title>
-        <p className="mt-2 text-sm leading-normal">{project.description}</p>
 
         {project.installInfo && (
           <InstallInfo href={project.installInfo.href}>
             {project.installInfo.content}
           </InstallInfo>
         )}
+
         {project.starInfo && (
           <StarInfo href={project.starInfo.href}>
             {project.starInfo.content}
           </StarInfo>
         )}
+
+        <p className="mt-2 text-sm leading-normal">{project.description}</p>
+
         <SkillLinks
           items={[
-            { id: 1, title: "test1", href: "onlyhisson.com" },
-            { id: 2, title: "test2", href: "onlyhisson.com" },
+            { id: 1, title: "test1", href: "http://www.onlyhisson.com" },
+            { id: 2, title: "test2", href: "http://www.onlyhisson.com" },
           ]}
         />
+
         <Skills items={project.skills} />
       </div>
       <Image
@@ -163,7 +166,7 @@ function InstallInfo({
 }) {
   return (
     <Link
-      className="relative mt-2 inline-flex items-center text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
+      className="relative mt-0 inline-flex items-center text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
       href={href}
       target="_blank"
       rel="noreferrer"
@@ -193,7 +196,7 @@ function StarInfo({
 }) {
   return (
     <Link
-      className="relative mt-2 inline-flex items-center text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
+      className="relative mt-0 inline-flex items-center text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
       href={href}
       target="_blank"
       rel="noreferrer"
