@@ -96,8 +96,8 @@ const projects = [
     ],
   },
   {
-    title: "USIM 정보 관리 관리자",
-    titleLabel: "USIN 관리자 웹페이지",
+    title: "SCMS(스마트카드 통합관리 솔루션)",
+    titleLabel: "USIM 관리자 웹페이지",
     href: null,
     imgSrc:
       "https://cdn.greenpostkorea.co.kr/news/photo/202301/205094_206160_729.jpg",

@@ -21,8 +21,8 @@ export default function SectionAbout({
           최근까지 암호화폐 관련 서비스 개발에 주로 참여했으며{" "}
           <StrongLink href="https://bitcoin.org/en/bitcoin-core/">
             Bitcoin Core
-          </StrongLink>{" "}
-          ,<StrongLink href="https://geth.ethereum.org/">Geth</StrongLink>로 각
+          </StrongLink>
+          , <StrongLink href="https://geth.ethereum.org/">Geth</StrongLink>로 각
           진영의 노드 서버를 구축하기도 했습니다. 이 때문에 자연스럽게 블록체인
           기술에 대한 미래를 생각할 수 있었고{" "}
           <span>

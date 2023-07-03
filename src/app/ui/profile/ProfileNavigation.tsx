@@ -80,7 +80,7 @@ const useScrollSpy = (navLinks: TNavLink[], offset: number = 0) => {
       window.removeEventListener("resize", scrollHandler);
       window.removeEventListener("scroll", scrollHandler);
     };
-  }, [navLinks, offset]);
+  }, [navLinks, offset, sections]);
 
   return activeSection;
 };
