@@ -13,107 +13,32 @@ export default function SectionAbout({
       <StickySectionTitle>About</StickySectionTitle>
       <div className="font-light">
         <p className="mb-4">
-          Back in 2012, I decided to try my hand at creating custom Tumblr
-          themes and tumbled head first into the rabbit hole of coding and web
-          development. Fast-forward to today, and I’ve had the privilege of
-          building software for an{" "}
-          <StrongLink href="https://us.mullenlowe.com/">
-            advertising agency
-          </StrongLink>
-          , a <StrongLink href="https://starry.com/">start-up</StrongLink>, a{" "}
-          <StrongLink href="https://scout.camd.northeastern.edu/">
-            student-led design studio
-          </StrongLink>
-          , and a{" "}
-          <StrongLink href="https://www.apple.com/apple-music/">
-            huge corporation
-          </StrongLink>
-          .
+          7년 차 개발자로 스타트업에서 웹과 앱을
+          디자인/개발/배포/운영하였습니다. 대부분 웹 서비스 개발을 담당했으며
+          필요에 따라 디자인도 같이 겸할 때가 많았습니다.
         </p>
         <p className="mb-4">
-          My main focus these days is building products and leading projects for
-          our clients at{" "}
-          <StrongLink href="https://upstatement.com/">Upstatement</StrongLink>.
-          In my free time I've also released an{" "}
-          <StrongLink href="https://www.newline.co/courses/build-a-spotify-connected-app">
-            online video course
+          최근까지 암호화폐 관련 서비스 개발에 주로 참여했으며{" "}
+          <StrongLink href="https://bitcoin.org/en/bitcoin-core/">
+            Bitcoin Core
           </StrongLink>{" "}
-          that covers everything you need to know to build a web app with the
-          Spotify API.
+          ,<StrongLink href="https://geth.ethereum.org/">Geth</StrongLink>로 각
+          진영의 노드 서버를 구축하기도 했습니다. 이 때문에 자연스럽게 블록체인
+          기술에 대한 미래를 생각할 수 있었고{" "}
+          <span>
+            "데이터의 저장과 사용, 소유가 네티즌에게 주어지는 완전히 개인화된
+            인터넷 환경"
+          </span>{" "}
+          이라는{" "}
+          <StrongLink href="https://namu.wiki/w/%EC%9B%B93.0/">
+            웹3.0
+          </StrongLink>
+          는 이제 웹서비스에서 필연적으로 사용될 기술이라는 의견입니다.
         </p>
         <p>
-          When I’m not at the computer, I’m usually rock climbing, hanging out
-          with my wife and two cats, or running around Hyrule searching for{" "}
-          <span className="group/korok inline-flex lg:cursor-[url('/next.svg'),_pointer] lg:font-medium lg:text-slate-200">
-            <span className="sr-only">Korok seeds</span>
-            <span
-              className="group-hover/korok:text-red-400 transition duration-75 group-hover/korok:-translate-y-px delay-[50ms]"
-              aria-hidden="true"
-            >
-              K
-            </span>
-            <span
-              className="group-hover/korok:text-orange-400 transition duration-75 group-hover/korok:-translate-y-px delay-[75ms]"
-              aria-hidden="true"
-            >
-              o
-            </span>
-            <span
-              className="group-hover/korok:text-yellow-400 transition duration-75 group-hover/korok:-translate-y-px delay-[100ms]"
-              aria-hidden="true"
-            >
-              r
-            </span>
-            <span
-              className="group-hover/korok:text-lime-400 transition duration-75 group-hover/korok:-translate-y-px delay-[125ms]"
-              aria-hidden="true"
-            >
-              o
-            </span>
-            <span
-              className="group-hover/korok:text-green-400 transition duration-75 group-hover/korok:-translate-y-px delay-[150ms]"
-              aria-hidden="true"
-            >
-              k
-            </span>
-            <span
-              className="group-hover/korok:text-teal-400 transition duration-75 group-hover/korok:-translate-y-px delay-[175ms]"
-              aria-hidden="true"
-            >
-              &nbsp;
-            </span>
-            <span
-              className="group-hover/korok:text-cyan-400 transition duration-75 group-hover/korok:-translate-y-px delay-[200ms]"
-              aria-hidden="true"
-            >
-              s
-            </span>
-            <span
-              className="group-hover/korok:text-sky-400 transition duration-75 group-hover/korok:-translate-y-px delay-[225ms]"
-              aria-hidden="true"
-            >
-              e
-            </span>
-            <span
-              className="group-hover/korok:text-blue-400 transition duration-75 group-hover/korok:-translate-y-px delay-[250ms]"
-              aria-hidden="true"
-            >
-              e
-            </span>
-            <span
-              className="group-hover/korok:text-indigo-400 transition duration-75 group-hover/korok:-translate-y-px delay-[275ms]"
-              aria-hidden="true"
-            >
-              d
-            </span>
-            <span
-              className="group-hover/korok:text-violet-400 transition duration-75 group-hover/korok:-translate-y-px delay-[300ms]"
-              aria-hidden="true"
-            >
-              s
-            </span>
-          </span>
-          .
+          컴퓨터 앞에 앉아 있는 시간 외에는 웨이트 트레이닝, 수영 등 운동을
+          통해서 스트레스를 풀고 있습니다. 때때로 서핑을 목적으로 여행을
+          떠납니다.
         </p>
       </div>
     </Section>

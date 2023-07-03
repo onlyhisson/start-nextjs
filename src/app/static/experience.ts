@@ -16,7 +16,7 @@ const experienceInfos = [
       "MariaDB",
     ],
     description: [
-      "주로 암호화폐 관련 서비스를 여러 포지션에 걸쳐서 웹 및 앱을 개발",
+      "주로 암호화폐 관련 서비스 개발에 참여, 여러 포지션에 걸쳐서 웹 및 앱을 개발",
       "- 거래소 연동 지갑 시스템",
       "- 암호화폐 시세 정보 수집 및 트레이딩뷰를 이용한 거래소 차트 구현",
       "- 실시간 암호화폐 정보를 위한 카카오톡 봇",
@@ -27,7 +27,7 @@ const experienceInfos = [
   {
     period: { from: "2018. 06", to: "2019. 05" },
     href: null,
-    title: "한국영상솔루션",
+    title: "한국영상솔루션 & 하나로팜",
     titleLabel: "한국영상솔루션",
     subTitle: ["선임연구원 (12개월)"],
     skillLinks: [],

@@ -25,12 +25,14 @@ type TTitleInfo = {
 };
 
 export type TProject = {
+  href: string | null;
   imgSrc: string;
   imgAlt: string;
   title: string;
   titleLabel: string;
   skills: string[];
-  description: string;
+  skillLinks: TLinkInfo[];
+  description: string[];
   installInfo?: {
     href: string;
     content: string;
@@ -116,7 +118,7 @@ export function ProjectCard({ project }: { project: TProject }) {
           titleInfo={{
             title: project.title,
             label: project.titleLabel,
-            href: "/",
+            href: project.href,
           }}
         >
           {null}
@@ -133,23 +135,26 @@ export function ProjectCard({ project }: { project: TProject }) {
             {project.starInfo.content}
           </StarInfo>
         )}
+        {project.description.map((desc, idx) => {
+          return (
+            <p
+              key={`project-desc-${idx}`}
+              className="mt-2 text-sm leading-normal"
+            >
+              {desc}
+            </p>
+          );
+        })}
 
-        <p className="mt-2 text-sm leading-normal">{project.description}</p>
-
-        <SkillLinks
-          items={[
-            { id: 1, title: "test1", href: "http://www.onlyhisson.com" },
-            { id: 2, title: "test2", href: "http://www.onlyhisson.com" },
-          ]}
-        />
+        <SkillLinks items={project.skillLinks} />
 
         <Skills items={project.skills} />
       </div>
       <Image
         src={project.imgSrc}
         alt={project.imgAlt}
-        width={200}
-        height={478}
+        width={400}
+        height={300}
         loading="lazy"
         className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
       />
