@@ -96,9 +96,14 @@ export function ExperienceCard({ experience }: { experience: TExperience }) {
         >
           <SubTitle subTitle={experience.subTitle} />
         </Title>
-        {experience.description.map((desc) => {
+        {experience.description.map((desc, idx) => {
           return (
-            <p className="mt-2 text-sm font-light leading-normal">{desc}</p>
+            <p
+              key={`profile-desc-${idx}`}
+              className="mt-2 text-sm font-light leading-normal"
+            >
+              {desc}
+            </p>
           );
         })}
 
