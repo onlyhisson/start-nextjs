@@ -28,8 +28,8 @@ export default function SectionAbout({
           <span>
             "데이터의 저장과 사용, 소유가 네티즌에게 주어지는 완전히 개인화된
             인터넷 환경"
-          </span>{" "}
-          이라는{" "}
+          </span>
+          으로 정의되는{" "}
           <StrongLink href="https://namu.wiki/w/%EC%9B%B93.0/">
             웹3.0
           </StrongLink>
