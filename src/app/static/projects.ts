@@ -66,7 +66,7 @@ const projects = [
   {
     title: "청소 중개 플랫폼 관리자",
     titleLabel: "청소 중개 플랫폼 관리 페이지",
-    href: "https://play.google.com/store/apps/details?id=com.pairingpay",
+    href: null,
     imgSrc: "/cleaning.jpeg",
     imgAlt: "paring_2.0",
     skills: ["Node.js", "Express.js", "HTML", "CSS", "jQuery", "MariaDB"],
