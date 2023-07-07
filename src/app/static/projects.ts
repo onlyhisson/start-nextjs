@@ -102,7 +102,7 @@ const projects = [
     imgSrc:
       "https://cdn.greenpostkorea.co.kr/news/photo/202301/205094_206160_729.jpg",
     imgAlt: "paring_2.0",
-    skills: ["Node.js", "Express.js", "HTML", "CSS", "jQuery", "MariaDB"],
+    skills: ["JAVA", "HTML", "CSS", "jQuery", "Oracle"],
     skillLinks: [],
     description: [
       "2014. 04 - 2015. 12",
