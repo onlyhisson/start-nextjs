@@ -15,7 +15,7 @@ export default function Footer() {
         <StrongLink2 href="https://noonnu.cc/font_page/1127">
           더잠실체
         </StrongLink2>
-        로 빌드하였고 라즈베리파이로 배포 및 운영하고 있습니다.
+        로 빌드하였고 IDC에서 배포 및 운영하고 있습니다.
       </p>
     </footer>
   );
