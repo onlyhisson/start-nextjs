@@ -10,7 +10,7 @@ export function middleware(request: NextRequest) {
   console.log("\n[START middleware] >>>>>>>>>>>>>>>>>");
   console.log(`# request.url : ${request.url}\n`);
 
-  return NextResponse.redirect(new URL("/profile", request.url));
+  //return NextResponse.redirect(new URL("/", request.url));
 }
 
 // See "Matching Paths" below to learn more
