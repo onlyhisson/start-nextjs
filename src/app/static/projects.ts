@@ -1,5 +1,26 @@
 const projects = [
   {
+    title: "비트코인 지갑 시스템 - 풀스택",
+    titleLabel: "비트코인 지갑 시스템 프로젝트",
+    href: "https://www.currency-explorer.com",
+    imgSrc: "/currency-explorer.png",
+    imgAlt: "currency-explorer",
+    skills: ["React", "Next.js", "Node.js", "NestJS", "MariaDB"],
+    skillLinks: [
+      {
+        id: 1,
+        title: "BitcoinRPC.js",
+        href: "https://github.com/onlyhisson/bitcoin-rpc-function-sample",
+      },
+    ],
+    description: [
+      "2023. 08 - 현재",
+      "API - 블록 및 트랜잭션 정보 조회, 수수료 조회, 시세 조회(30분 간격)",
+      "Bitcoin 스케쥴러 - 블록 및 트랜잭션 정보 저장, memory pool 분당 정보 편집 & 수집(트랜잭션 수수료 책정 위함)",
+      "코인마켓캡 시세 정보 30분 간격 수집",
+    ],
+  },
+  {
     title: "거래소 지갑 시스템",
     titleLabel: "거래소 지갑 시스템 프로젝트",
     href: "https://velog.io/@onlyhisson?tag=crypto",
