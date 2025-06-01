@@ -13,7 +13,7 @@ export default function SectionAbout({
       <StickySectionTitle>About</StickySectionTitle>
       <div className="font-light">
         <p className="mb-4">
-          7년 차 개발자로 스타트업에서 웹과 앱을
+          10년 차 개발자로 스타트업에서 웹과 앱을
           디자인/개발/배포/운영하였습니다. 대부분 웹 서비스 개발을 담당했으며
           필요에 따라 디자인도 같이 겸할 때가 많았습니다.
         </p>
