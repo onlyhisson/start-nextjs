@@ -8,7 +8,7 @@ const experienceInfos = [
     skillLinks: [],
     skills: [
       "React",
-      "Nextjs",
+      "Next.js",
       "JavaScript",
       "TypeScript",
     ],
