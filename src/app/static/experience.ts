@@ -1,5 +1,24 @@
 const experienceInfos = [
   {
+    period: { from: "2024. 05", to: "현재" },
+    href: "https://www.wanted.co.kr/gigs",
+    title: "원티드긱스",
+    titleLabel: "wanted-gigs",
+    subTitle: ["프리랜서"],
+    skillLinks: [],
+    skills: [
+      "React",
+      "Nextjs",
+      "JavaScript",
+      "TypeScript",
+    ],
+    description: [
+      "프로젝트 단위 개발",
+      "- CJ대한통운 사내 관제 시스템 개발",
+      "- SKDND 주거 임대 서비스 개발",
+    ],
+  },
+  {
     period: { from: "2020. 09", to: "2023. 04" },
     href: "http://hackers.iwinv.net/",
     title: "해커스홀딩스",
