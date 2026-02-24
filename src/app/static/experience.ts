@@ -6,12 +6,7 @@ const experienceInfos = [
     titleLabel: "wanted-gigs",
     subTitle: ["프리랜서"],
     skillLinks: [],
-    skills: [
-      "React",
-      "Next.js",
-      "JavaScript",
-      "TypeScript",
-    ],
+    skills: ["React", "Next.js", "JavaScript", "TypeScript"],
     description: [
       "프로젝트 단위 개발",
       "- CJ대한통운 사내 관제 시스템 개발",
@@ -19,7 +14,7 @@ const experienceInfos = [
     ],
   },
   {
-    period: { from: "2020. 09", to: "2023. 04" },
+    period: { from: "2019. 09", to: "2023. 04" },
     href: "http://hackers.iwinv.net/",
     title: "해커스홀딩스",
     titleLabel: "hackersholdings",
