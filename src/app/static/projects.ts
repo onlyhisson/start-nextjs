@@ -1,5 +1,32 @@
 const projects = [
   {
+    title: "부동산 임대 플랫폼(디앤디프라퍼티솔루션) - 프론트엔드",
+    titleLabel: "자사 부동산 임대 플랫폼(사용자 및 관리자) 웹 프로그램",
+    href: "https://betterliving.kr/",
+    imgSrc: "/betterliving.png",
+    imgAlt: "currency-explorer",
+    skills: ["React", "Next.js"],
+    skillLinks: [],
+    description: [
+      "2024. 08 - 2025. 12",
+      "사용자 - 임대할 조건 입력 및 예약 진행",
+      "관리자 - 회원관리, 사이트 및 호실관리, 계약관리, 결제관리, 쿠폰관리 등",
+    ],
+  },
+  {
+    title: "창고 온습도 관제 웹 프로그램(CJ대한통운) - 프론트엔드",
+    titleLabel: "사내 창고 온습도 정보 모니터링 관리자 시스템",
+    href: null,
+    imgSrc: "/cj.jpg",
+    imgAlt: "currency-explorer",
+    skills: ["React", "Next.js"],
+    skillLinks: [],
+    description: [
+      "2024. 05 - 2024. 06",
+      "각 창고 온습도 및 기타 데이터 정보 연동 및 대시보드 출력",
+    ],
+  },
+  {
     title: "비트코인 지갑 시스템 - 풀스택",
     titleLabel: "비트코인 지갑 시스템 프로젝트",
     href: "https://www.currency-explorer.com",

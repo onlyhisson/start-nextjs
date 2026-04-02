@@ -6,7 +6,7 @@ export default function SNSLinks() {
       <li className="mr-5 text-xs">
         <Link
           className="block hover:text-slate-200"
-          href="https://github.com/onlyhisson"
+          href="https://github.com/peterloveshim"
           target="_blank"
           rel="noreferrer"
         >
