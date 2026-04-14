@@ -13,27 +13,21 @@ export default function SectionAbout({
       <StickySectionTitle>About</StickySectionTitle>
       <div className="font-light">
         <p className="mb-4">
-          10년 차 개발자로 스타트업에서 웹과 앱을
-          디자인/개발/배포/운영하였습니다. 대부분 웹 서비스 개발을 담당했으며
-          필요에 따라 디자인도 같이 겸할 때가 많았습니다.
+          경력 초반 Model2(Java, JSP) 풀스택, Linux 서버 셋팅의 경험과 이후 IoT
+          디바이스 통신, 암호화폐 서비스 풀스택 개발(Next.js), 앱(React Native)
+          출시까지 프론트엔드의 경계를 넘나들며 실전 문제를 직접 해결해온
+          개발자입니다.
         </p>
         <p className="mb-4">
-          최근까지 암호화폐 관련 서비스 개발에 주로 참여했으며{" "}
-          <StrongLink href="https://bitcoin.org/en/bitcoin-core/">
-            Bitcoin Core
-          </StrongLink>
-          , <StrongLink href="https://geth.ethereum.org/">Geth</StrongLink>로 각
-          진영의 노드 서버를 구축하기도 했습니다. 이 때문에 자연스럽게 블록체인
-          기술에 대한 미래를 생각할 수 있었고{" "}
-          <span>
-            &quot;데이터의 저장과 사용, 소유가 네티즌에게 주어지는 완전히
-            개인화된 인터넷 환경&quot;
-          </span>
-          으로 정의되는{" "}
-          <StrongLink href="https://namu.wiki/w/%EC%9B%B93.0/">
-            웹3.0
-          </StrongLink>
-          는 이제 웹서비스에서 필연적으로 사용될 기술이라는 의견입니다.
+          풀스택 개발 경력도 있지만 현재 기준 직전으로 최소 4~5년 이상 React,
+          Next.js 개발 경험이 있어서 프론트엔드 개발에 적합합니다. 기획부터
+          배포까지 전 과정을 이해할 수 있고 기술 제약 없이 스스로 문제를 찾아
+          해결하며 팀 성과를 최우선으로 합니다.
+        </p>
+        <p className="mb-4">
+          최근까지 프리랜서로 여러 프로젝트에 프론트엔드 개발로 참여하며, React
+          / Next.js / TypeScript 스택의 개발을 했고 지금은 Claude Code를
+          활용하여 워크플로우 개선에 집중하고 있습니다.
         </p>
         <p>
           컴퓨터 앞에 앉아 있는 시간 외에는 웨이트 트레이닝, 수영 등 운동을
